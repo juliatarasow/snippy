@@ -1,0 +1,172 @@
+{
+    "styles": [
+        {
+            "style": "a11y-dark"
+        },
+        {
+            "style": "a11y-light"
+        },
+        {
+            "style": "agate"
+        },
+        {
+            "style": "androidstudio"
+        },
+        {
+            "style": "an-old-hope"
+        },
+        {
+            "style": "arduino-light"
+        },
+        {
+            "style": "arta"
+        },
+        {
+            "style": "ascetic"
+        },
+        {
+            "style": "atom-one-dark"
+        },
+        {
+            "style": "atom-one-dark-reasonable"
+        },
+        {
+            "style": "atom-one-light"
+        },
+        {
+            "style": "brown-paper"
+        },
+        {
+            "style": "codepen-embed"
+        },
+        {
+            "style": "color-brewer"
+        },
+        {
+            "style": "dark"
+        },
+        {
+            "style": "default"
+        },
+        {
+            "style": "docco"
+        },
+        {
+            "style": "far"
+        },
+        {
+            "style": "foundation"
+        },
+        {
+            "style": "github"
+        },
+        {
+            "style": "gml"
+        },
+        {
+            "style": "googlecode"
+        },
+        {
+            "style": "gradient-dark"
+        },
+        {
+            "style": "gradient-light"
+        },
+        {
+            "style": "grayscale"
+        },
+        {
+            "style": "hybrid"
+        },
+        {
+            "style": "idea"
+        },
+        {
+            "style": "ir-black"
+        },
+        {
+            "style": "isbl-editor-dark"
+        },
+        {
+            "style": "isbl-editor-light"
+        },
+        {
+            "style": "lightfair"
+        },
+        {
+            "style": "lioshi"
+        },
+        {
+            "style": "magula"
+        },
+        {
+            "style": "mono-blue"
+        },
+        {
+            "style": "monokai"
+        },
+        {
+            "style": "monokai-sublime"
+        },
+        {
+            "style": "night-owl"
+        },
+        {
+            "style": "nnfx-dark"
+        },
+        {
+            "style": "nord"
+        },
+        {
+            "style": "obsidian"
+        },
+        {
+            "style": "paraiso-dark"
+        },
+        {
+            "style": "paraiso-light"
+        },
+        {
+            "style": "pojoaque"
+        },
+        {
+            "style": "purebasic"
+        },
+        {
+            "style": "rainbow"
+        },
+        {
+            "style": "routeros"
+        },
+        {
+            "style": "school-book"
+        },
+        {
+            "style": "shades-of-purple"
+        },
+        {
+            "style": "srcery"
+        },
+        {
+            "style": "stackoverflow-dark"
+        },
+        {
+            "style": "stackoverflow-light"
+        },
+        {
+            "style": "sunburst"
+        },
+        {
+            "style": "tomorrow-night-blue"
+        },
+        {
+            "style": "tomorrow-night-bright"
+        },
+        {
+            "style": "vs2015"
+        },
+        {
+            "style": "xt256"
+        }
+    ]
+}

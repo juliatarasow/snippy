@@ -1,0 +1,87 @@
+{
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@chakra-ui/react": "^1.0.0",
+    "@dicebear/avatars": "^4.9.1",
+    "@dicebear/avatars-gridy-sprites": "^4.9.1",
+    "@dicebear/avatars-initials-sprites": "^4.9.1",
+    "@emotion/react": "^11.0.0",
+    "@emotion/styled": "^11.0.0",
+    "@fontsource/fira-code": "^4.5.1",
+    "@fontsource/roboto": "^4.5.0",
+    "@fontsource/roboto-mono": "^4.5.0",
+    "@testing-library/jest-dom": "^5.9.0",
+    "@testing-library/react": "^10.2.1",
+    "@testing-library/user-event": "^12.0.2",
+    "@types/jest": "^25.0.0",
+    "@types/node": "^12.0.0",
+    "@types/quill": "^1.3.10",
+    "@types/react": "^16.9.0",
+    "@types/react-dom": "^16.9.0",
+    "@types/react-router-dom": "^5.1.8",
+    "axios": "^0.21.1",
+    "framer-motion": "^4.0.0",
+    "highlight.js": "^11.2.0",
+    "install": "^0.13.0",
+    "js-cookie": "^3.0.1",
+    "moment": "^2.29.1",
+    "node-sass": "^6.0.1",
+    "npm": "^7.22.0",
+    "observable-hooks": "^4.0.5",
+    "prettier": "^2.3.2",
+    "prism-react-renderer": "^1.2.1",
+    "prismjs": "^1.25.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-highlight": "^0.14.0",
+    "react-hook-form": "^7.14.0",
+    "react-html-parser": "^2.0.2",
+    "react-icons": "^3.0.0",
+    "react-quill": "^2.0.0-beta.4",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.3",
+    "rxjs": "^7.3.0",
+    "sass-loader": "^10.1.1",
+    "styled-components": "^5.3.1",
+    "typescript": "^3.9.5",
+    "valtio": "^1.2.1",
+    "web-vitals": "^0.2.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@dicebear/avatars-gridy-sprites": "^4.9.1",
+    "@types/js-cookie": "^2.2.7",
+    "@types/react-highlight": "^0.12.3",
+    "@types/react-html-parser": "^2.0.2",
+    "@types/react-syntax-highlighter": "^13.5.2",
+    "@types/styled-components": "^5.1.14",
+    "css-loader": "^4.3.0",
+    "style-loader": "^1.3.0"
+  }
+}

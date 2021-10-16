@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "js-cookie": "^3.0.1",
+    "prism-react-renderer": "^1.2.1"
+  },
+  "devDependencies": {
+    "@types/styled-components": "^5.1.14",
+    "eslint": "^8.0.0-rc.0",
+    "styled-components": "^5.3.1"
+  }
+}

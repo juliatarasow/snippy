@@ -1,2 +1,2 @@
 # snippy
-DCI final project
+DCI final Project

@@ -1,0 +1,51 @@
+{
+  "data": {
+    "message": "Success",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MTRiMmQ1NWI2ZTgxNjhhZDVlZjVjNWMiLCJpYXQiOjE2MzIzODUzNjksImV4cCI6MTY0MDE2MTM2OX0.53t3z-_bb0ahbOBpXnAMkxST51OvtZfuM1Tx3w13ruY",
+    "user": {
+      "dates": {
+        "registered": "2021-09-22T12:26:06.641Z"
+      },
+      "savedSnippets": [],
+      "_id": "614b2d55b6e8168ad5ef5c5c",
+      "username": "Blas",
+      "firstname": "Pog",
+      "lastname": "o",
+      "email": "mail@mail.com",
+      "password": "$2b$10$ydFKAmXzNGCaaLeG3W60JOgETZ/cdKqkhJGkGxZAFCX3OvrEwG71q",
+      "profile": "https://avatars.dicebear.com/api/gridy/Pogo.svg",
+      "__v": 0
+    }
+  },
+  "status": 200,
+  "statusText": "OK",
+  "headers": {
+    "content-length": "532",
+    "content-type": "application/json; charset=utf-8"
+  },
+  "config": {
+    "url": "http://localhost:4000/user/login",
+    "method": "post",
+    "data": "{\"username\":\"Blas\",\"password\":\"arepas\"}",
+    "headers": {
+      "Accept": "application/json",
+      "Content-Type": "application/json",
+      "cache-control": "no-cache",
+      "Access-Control-Allow-Headers": "DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type",
+      "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMSIsImlhdCI6MTYyNjAwODcwMywiZXhwIjoxNjI2MDk1MTAzfQ._l_eJnQFcPaMEG9-l-5Rnm7pCAUE_DrVQHAeLFPyfgo",
+      "x-api-key": "AIza0SyDv2jKlVRuZObh2njhRSdcOVq21VlHHDEPQ"
+    },
+    "transformRequest": [
+      null
+    ],
+    "transformResponse": [
+      null
+    ],
+    "timeout": 0,
+    "xsrfCookieName": "XSRF-TOKEN",
+    "xsrfHeaderName": "X-XSRF-TOKEN",
+    "maxContentLength": -1,
+    "maxBodyLength": -1
+  },
+  "request": {}
+}
