@@ -1,9 +1,4 @@
-import React, {
-    useReducer,
-    useCallback,
-    createContext,
-    useContext,
-} from 'react'
+import React, { useReducer, useCallback, createContext, useContext } from 'react'
 import axios from 'axios'
 
 import { User } from 'snippy'

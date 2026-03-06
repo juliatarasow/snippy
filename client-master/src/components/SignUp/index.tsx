@@ -1,28 +1,17 @@
 import React, { useState } from 'react'
 import { useForm, SubmitHandler } from 'react-hook-form'
+import { Link as RouterLink, useNavigate } from 'react-router-dom'
 
-import {
-    Box,
-    FormControl,
-    FormLabel,
-    FormHelperText,
-    Input,
-    Button,
-    Heading,
-    VStack,
-    Text,
-} from '@chakra-ui/react'
+import { Box, FormControl, FormLabel, FormHelperText, Input, Button, Heading, VStack, Text } from '@chakra-ui/react'
 
-import { Link as RouterLink } from 'react-router-dom'
 import { User } from 'snippy'
-import { useHistory } from 'react-router-dom'
 import ErrorMessage from '../Shared/ErrorMessage'
 
 const url = 'http://localhost:4000/user/register'
 
 export default function SignUpPage() {
 
-    const history = useHistory()
+    const navigate = useNavigate()
     /* Add Avatar... */
     const [error, setError] = useState<User['message']>()
     const {
@@ -41,11 +30,11 @@ export default function SignUpPage() {
         })
         response.then((res: any) => {
             if (res.status === 200) {
-                setError(null || undefined)
+                setError(undefined)
          
 
                 setTimeout(() => {
-                    history.push('/login')
+                    navigate('/login')
                 }, 1000)
 
                 return res.json()

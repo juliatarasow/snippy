@@ -23,7 +23,6 @@
     "passport-jwt": "^4.0.0"
   },
   "devDependencies": {
-    "express-openid-connect": "^2.5.0",
     "nodemon": "^2.0.12"
   }
 }

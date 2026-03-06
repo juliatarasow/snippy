@@ -1,11 +1,11 @@
 import * as React from 'react'
-import { ChakraProvider} from '@chakra-ui/react'
-import { AuthProvider, useAuthState } from './auth'
+import { ChakraProvider } from '@chakra-ui/react'
 
 import { customTheme } from './Styles/theme'
 import './Styles/Fonts.tsx'
 
-import { AppRouter } from './Router'
+import { AuthProvider, useAuthState } from './auth'
+import { AppRouter } from './AppRouter'
 import { SnipProvider } from 'useReactive'
 import useReadLocalStorage from 'components/Hooks/useReadlocalStorage'
 import { User } from 'snippy'

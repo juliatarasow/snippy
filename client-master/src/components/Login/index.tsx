@@ -1,26 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import { useForm, SubmitHandler } from 'react-hook-form'
-import { useHistory } from 'react-router-dom'
+import {Link as RouterLink, useNavigate } from 'react-router-dom'
 
-import {
-    Box,
-    FormControl,
-    FormLabel,
-    Input,
-    Button,
-    Heading,
-    VStack,
-    Text,
-} from '@chakra-ui/react'
-
-import { Link as RouterLink } from 'react-router-dom'
-import ErrorMessage from 'components/Shared/ErrorMessage'
 import { fetching } from 'useAxios'
-import { useLogin } from 'auth'
 
+import { Box, FormControl, FormLabel, Input, Button, Heading, VStack, Text } from '@chakra-ui/react'
+
+import { useLogin } from 'auth'
 import { User, Data } from 'snippy'
 import { setSessionCookie } from 'sessions'
 import store from 'store'
+import ErrorMessage from 'components/Shared/ErrorMessage'
 import useLocalStorage from 'components/Hooks/useLocalStorage'
 
 export default function LoginPage() {
@@ -39,7 +29,7 @@ export default function LoginPage() {
         activities: [],
     })
     const loginUser = useLogin()
-    const history = useHistory()
+    const navigate = useNavigate()
 
     useEffect(() => {
         if (user.token) {
@@ -56,17 +46,17 @@ export default function LoginPage() {
             .then((response) => {
                 if (response.data.token) {
                     loginUser(response.data.user)
-                    store.setActiveUser(response.data.user)
+                    store.activeUser = response.data.user
                     setSessionCookie(response.data.token) // NOT IMPORTANT NEED TO FIND USAGE
                     sessionStorage.setItem('user_id', response.data.user._id) // used to update user!!
                     setTimeout(() => {
                         setUser(store.activeUser) // USER GETS UPDATED ON THE LOCAL STORAGE
                     }, 2000)
-                    history.push('/dashboard')
+                    navigate('/dashboard')
                 }
             })
             .catch((error) => {
-                setError(error)
+                setError(error.message)
             })
     }
 

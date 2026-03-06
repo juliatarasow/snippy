@@ -1,4 +1,4 @@
-exports.modules = {
+export const modules = {
     toolbar: [
       [{ 'header': [1, 2, false] }],
       ['code-block'],
@@ -9,7 +9,7 @@ exports.modules = {
   }
 
 
-  exports.formats = [
+  export const formats = [
     'header',
     'code-block',
     'indent',

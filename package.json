@@ -1,11 +1,24 @@
 {
   "dependencies": {
+    "@chakra-ui/icons": "^2.2.4",
+    "@chakra-ui/react": "^3.33.0",
+    "@emotion/react": "^11.14.0",
+    "@emotion/style": "^0.8.0",
     "js-cookie": "^3.0.1",
-    "prism-react-renderer": "^1.2.1"
+    "mongodb": "^7.1.0",
+    "prism-react-renderer": "^1.2.1",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "react-router-dom": "^7.13.1"
   },
   "devDependencies": {
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
     "@types/styled-components": "^5.1.14",
-    "eslint": "^8.0.0-rc.0",
-    "styled-components": "^5.3.1"
+    "@vitejs/plugin-react": "^5.1.4",
+    "eslint": "^10.0.2",
+    "styled-components": "^5.3.1",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.1"
   }
 }

@@ -8,9 +8,6 @@ const snippetRoutes = require("./routes/snippet");
 const userRoutes = require("./routes/user");
 const postRoutes = require("./routes/post");
 
-const { auth } = require("express-openid-connect");
-const { requiresAuth } = require("express-openid-connect");
-
 const dotenv = require("dotenv");
 dotenv.config();
 
@@ -36,26 +33,6 @@ mongoose
   .then(() => console.log("Database connected!"))
   .catch((error) => console.log("Database is not connected!", error));
 
-const config = {
-  authRequired: false,
-  auth0Logout: true,
-  secret: "a long, randomly-generated string stored in env",
-  baseURL: "http://localhost:4000",
-  clientID: "LGxOPLcDGEXsCb78bu57y2eZkHgLpJft",
-  issuerBaseURL: "https://dev-fk426xno.eu.auth0.com",
-};
-
-// auth router attaches /login, /logout, and /callback routes to the baseURL
-app.use(auth(config));
-
-// req.isAuthenticated is provided from the auth router
-app.get("/", (req, res) => {
-  res.send(req.oidc.isAuthenticated() ? "Logged in" : "Logged out");
-});
-
-app.get("/profile", requiresAuth(), (req, res) => {
-  res.send(JSON.stringify(req.oidc.user));
-});
 app.use("/user", userRoutes);
 app.use("/snippet", snippetRoutes);
 app.use("/posts", postRoutes);

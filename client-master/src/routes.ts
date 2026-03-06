@@ -8,6 +8,7 @@ import Feed from 'view/Feed'
 import DashboardMainComponent from 'view/Dashboard'
 import Profile from './components/Profile'
 import SettingsComponent from 'components/Settings'
+
 const Routes = [
     {
         path: '/',

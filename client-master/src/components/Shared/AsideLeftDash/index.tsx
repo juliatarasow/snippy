@@ -1,14 +1,13 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import { Box, Button, Icon, Link as TheLink, VStack } from '@chakra-ui/react'
+import { Link, useNavigate } from 'react-router-dom'
 import { FaBlog, FaCog, FaHome, FaSignOutAlt } from 'react-icons/fa'
 
-import { useHistory } from 'react-router'
+import { Box, Button, Icon, Link as TheLink, VStack } from '@chakra-ui/react'
 
 import { useLogout } from '../../../auth'
 
 function AsideLeftDash({ isLoggedIn }: { isLoggedIn: boolean | null }) {
-    const history = useHistory()
+    const navigate = useNavigate()
     const logoutUser = useLogout()
     return (
         <Box px="2rem" maxW="275px" position="fixed">
@@ -34,7 +33,7 @@ function AsideLeftDash({ isLoggedIn }: { isLoggedIn: boolean | null }) {
                     <TheLink
                         onClick={(e) => {
                             logoutUser(e)
-                            history.push('/')
+                            navigate('/')
                         }}
                         variant="aside"
                         _hover={{ color: 'warning' }}

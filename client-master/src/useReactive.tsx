@@ -1,5 +1,5 @@
 import React, { createContext, useContext } from 'react'
-import { BehaviorSubject, interval, map, take } from 'rxjs'
+import { BehaviorSubject, map } from 'rxjs'
 import { Post } from 'snippy'
 export const rawSnippet$ = new BehaviorSubject<Post[]>([])
 /* 

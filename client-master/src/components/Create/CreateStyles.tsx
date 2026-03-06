@@ -1,12 +1,5 @@
 import React, { useState } from 'react'
-import {
-    Box,
-    Divider,
-    FormControl,
-    HStack,
-    Select,
-    Text,
-} from '@chakra-ui/react'
+import { Box, Divider, FormControl, HStack, Select, Text } from '@chakra-ui/react'
 import { useFormContext } from 'react-hook-form'
 import styles from './QuillSettings/styling.json'
 

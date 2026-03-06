@@ -1,15 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import {
-    Flex,
-    Box,
-    Button,
-    Heading,
-    Divider,
-    HStack,
-    VStack,
-} from '@chakra-ui/react'
+import { Flex, Box, Button, Heading, Divider, HStack, VStack } from '@chakra-ui/react'
 import { useForm, SubmitHandler, FormProvider } from 'react-hook-form'
-import { useHistory } from 'react-router'
+import { useNavigate } from 'react-router-dom'
 
 import CreateField from './CreateField'
 import CreateSelectField from './CreateSelectField'
@@ -26,7 +18,7 @@ import { Post } from 'snippy'
 function CreateSnippet() {
     const [step, setStep] = useState(0)
     const { username, _id, profile } = useAuthState()
-    const history = useHistory()
+    const navigate = useNavigate()
 
     const methods = useForm<Post['snippet']>()
 
@@ -52,7 +44,7 @@ function CreateSnippet() {
             }
             store.publishSnippet()
             load('posts')
-            history.push('/dashboard')
+            navigate('/dashboard')
         } catch (error) {
             console.log(error)
         }
