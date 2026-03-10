@@ -1,36 +1,18 @@
 import React from 'react'
-import {
-    Divider,
-    Heading,
-    VStack,
-    Box,
-    HStack,
-    Text,
-    Flex,
-} from '@chakra-ui/react'
 
-import { User } from 'snippy'
-import AvatarComponent from 'components/Shared/Avatar'
+import { Divider, Heading, VStack, Box, HStack, Text, Flex } from '@chakra-ui/react'
 
 import { useAuthState } from 'auth'
+import { User } from 'snippy'
 import TimelineComponent from './Timeline'
+import AvatarComponent from 'components/Shared/Avatar'
 
 function ProfileCard({ user }: { user: User }) {
     const { profile } = useAuthState()
 
     return (
-        <div>
-            <VStack
-                borderColor="black"
-                borderWidth="1px"
-                borderRadius="10px"
-                minH="fit-content"
-                w="275px"
-                alignItems="start"
-                pt="8px"
-                pb="16px"
-                mx="16px"
-            >
+        <>
+            <VStack borderColor="black" borderWidth="1px" borderRadius="10px" minH="fit-content" w="275px" alignItems="start" pt="8px" pb="16px" mx="16px">
                 <Flex alignItems="center" ml="16px">
                     <Box w="54px" mr="8px">
                         {profile && <AvatarComponent profile={profile} />}
@@ -44,13 +26,13 @@ function ProfileCard({ user }: { user: User }) {
                         <HStack>
                             <Text variant="profile">created:</Text>
                             <Text variant="counter">
-                                {user?.snippets.length}
+                                {user?.snippets?.length ?? 0}
                             </Text>
                         </HStack>
                         <HStack>
                             <Text variant="profile">saved:</Text>
                             <Text variant="counter">
-                                {user?.savedSnippets.length}
+                                {user?.savedSnippets?.length ?? 0}
                             </Text>
                         </HStack>
                     </Flex>
@@ -69,7 +51,7 @@ function ProfileCard({ user }: { user: User }) {
                     </Flex>
                 </Flex>
             </VStack>
-        </div>
+        </>
     )
 }
 

@@ -19,7 +19,7 @@ const Preview = ({ content, style }: Style) => {
     useEffect(() => {
         highlight()
         if (style) {
-            import(`highlight.js/styles/${style}.css`)
+            import(/* @vite-ignore */`highlight.js/styles/${style}.css`)
         }
     }, [style])
 

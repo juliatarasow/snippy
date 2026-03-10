@@ -14,6 +14,7 @@ export default defineConfig({
       view: path.resolve(__dirname, "src/view"),
       service: path.resolve(__dirname, "src/service"),
       sessions: path.resolve(__dirname, "src/sessions"),
+      store: path.resolve(__dirname, "src/store"),
       useAxios: path.resolve(__dirname, "src/useAxios"),
       useReactive: path.resolve(__dirname, "src/useReactive")
     }

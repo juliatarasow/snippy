@@ -1,20 +1,18 @@
 import React, { Suspense, useEffect, useState } from 'react'
-import { Box } from '@chakra-ui/layout'
+
+import { Box, Flex, HStack, VStack } from '@chakra-ui/react'
 import { SkeletonCircle, SkeletonText } from '@chakra-ui/skeleton'
 
-import { getUserData } from 'service/store_services'
+import { useAuthState } from 'auth'
+import store, { load, subscribe } from 'store'
 
 import ProfileComponent from 'components/Profile'
 import Filter from 'components/Profile/Filter'
-
-import { useAuthState } from 'auth'
-import { Flex, HStack, VStack } from '@chakra-ui/react'
-
-import AsideLeftDash from 'components/Shared/AsideLeftDash'
-
-import store, { load, subscribe } from 'store'
-import { Post, User } from 'snippy'
 import ProfileCard from 'components/Profile/ProfileCard'
+import AsideLeftDash from 'components/Shared/AsideLeftDash'
+import { getUserData } from 'service/store_services'
+
+import { Post, User } from 'snippy'
 
 const DashboardMainComponent = () => {
     const { _id } = useAuthState()
