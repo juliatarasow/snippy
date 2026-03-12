@@ -1,13 +1,12 @@
-import ExperimentalComponent from 'components/Experiement/ExperimentalComponent'
-import HomeComponent from 'components/Home'
-import LoginPage from 'components/Login'
-import SinglePostComponent from 'components/Shared/SinglePost'
-import SignUpPage from 'components/SignUp'
+import HomeComponent from 'view/Home/Home'
+import LoginPage from 'view/Login'
+import SinglePostComponent from 'components/SinglePost'
+import SignUpPage from 'view/SignUp'
 import CreateMainComponent from 'view/Create'
 import Feed from 'view/Feed'
 import DashboardMainComponent from 'view/Dashboard'
-import Profile from './components/Profile'
-import SettingsComponent from 'components/Settings'
+import Profile from './view/Profile'
+import SettingsComponent from 'view/Settings'
 
 const Routes = [
     {
@@ -48,11 +47,6 @@ const Routes = [
     {
         path: '/singlepost',
         component: SinglePostComponent,
-        isPrivate: true,
-    },
-    {
-        path: '/test',
-        component: ExperimentalComponent,
         isPrivate: true,
     },
     {

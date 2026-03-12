@@ -1,41 +1,31 @@
 import React, { useEffect, useState } from 'react'
 import { VStack } from '@chakra-ui/react'
-import { derive } from 'valtio/utils'
+import Feed from './Feed'
 
-/* Custom Library */
-import store, { load, Store, subscribe } from 'store'
-
-/* Components */
-import Feed from 'view/Feed/Feed'
 import IndexPage from 'view/Feed/IndexPage'
-
-/* Types */
-
-function FeedMainComponent() {
-    const [posts, setPosts] = useState<Store['posts']>([])
-    
+import store, { Store, subscribe } from 'store'
+import { derive } from 'valtio/utils'
+import { load } from 'store'
+function Post() {
+    const [state, setstate] = useState<Store['posts']>([])
     useEffect(() => {
         load('posts')
-        
-        subscribe((store) => setPosts(store.posts))
+        subscribe((store) => setstate(store.posts))
         return () => {
-            setPosts([])
+            setstate([])
         }
     }, [])
-
-    /* Valtio Derive Utily */
     derive({
-        scores: (get) =>
+        doubled: (get) =>
             get(store).posts.forEach(
                 (post) => {
                     post.score = post.snippet.upvote - post.snippet.downvote
                 },
                 {
-                    proxy: posts,
+                    proxy: state,
                 }
             ),
     })
-
     return (
         <IndexPage isLoggedIn={true}>
             <div
@@ -44,9 +34,9 @@ function FeedMainComponent() {
                     height: '100%',
                 }}
             >
-                {posts ? (
+                {state ? (
                     <VStack>
-                        {posts.map((post, index) => (
+                        {state.map((post, index) => (
                             <Feed key={index} index={index} post={post}></Feed>
                         ))}
                     </VStack>
@@ -56,4 +46,4 @@ function FeedMainComponent() {
     )
 }
 
-export default FeedMainComponent
+export default Post

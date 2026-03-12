@@ -1,6 +1,6 @@
 import React from 'react'
 
-import CreateSnippet from 'components/Create'
+import CreateSnippet from 'view/Create/CreateSnippet'
 
 const CreateMainComponent = () => {
     return <CreateSnippet />

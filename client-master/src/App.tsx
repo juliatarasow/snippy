@@ -7,7 +7,7 @@ import './Styles/Fonts.tsx'
 import { AuthProvider, useAuthState } from './auth'
 import { AppRouter } from './AppRouter'
 import { SnipProvider } from 'useReactive'
-import useReadLocalStorage from 'components/Hooks/useReadlocalStorage'
+import useReadLocalStorage from './Hooks/useReadlocalStorage'
 import { User } from 'snippy'
 
 
