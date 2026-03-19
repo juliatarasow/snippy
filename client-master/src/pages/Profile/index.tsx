@@ -1,4 +1,4 @@
-import { Box, HStack, VStack, Text, Flex, Center } from '@chakra-ui/react'
+import { HStack, VStack, Text, Flex } from '@chakra-ui/react'
 import React from 'react'
 import { Post, User } from 'snippy'
 

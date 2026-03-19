@@ -3,7 +3,7 @@ import { Link as RouterLink } from 'react-router-dom'
 import { Textarea, Box, Button } from '@chakra-ui/react'
 import { useForm } from 'react-hook-form'
 
-import CommentS from '../../components/Feed/PostComponent/Comment/Comments'
+import CommentS from './Comments'
 
 import { useAuthState } from 'auth'
 import store from 'store'

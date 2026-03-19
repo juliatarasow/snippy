@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { VStack } from '@chakra-ui/react'
 import Feed from './Feed'
 
-import IndexPage from 'view/Feed/IndexPage'
+import IndexPage from 'pages/Feed/IndexPage'
 import store, { Store, subscribe } from 'store'
 import { derive } from 'valtio/utils'
 import { load } from 'store'

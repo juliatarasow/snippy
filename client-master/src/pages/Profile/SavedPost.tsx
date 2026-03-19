@@ -1,12 +1,13 @@
-import { Flex, Text } from '@chakra-ui/react'
-import IconAside from 'components/IconAside'
 import React, { useEffect, useState } from 'react'
-import { FaPlus } from 'react-icons/fa'
+
+import { Flex, Text } from '@chakra-ui/react'
+
+import SmallDetail from './SmallPost/SmallDetail'
 
 import { getPostData } from 'service/store_services'
 import { Post, User } from 'snippy'
 
-import SmallDetail from './SmallPost/SmallDetail'
+
 
 const SavedPostComponent = ({ saved }: { saved: User['savedSnippets'] }) => {
     const [savedOnes, setSavedOnes] = useState<any[]>()

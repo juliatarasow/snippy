@@ -1,9 +1,8 @@
-import { Box, Flex, Text, Spacer } from '@chakra-ui/layout'
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { FaExternalLinkAlt, FaJsSquare } from 'react-icons/fa'
 import { Snippet } from 'snippy'
-import { Icon, Tag, TagLabel, TagLeftIcon } from '@chakra-ui/react'
+import { Icon, Tag, TagLabel, Box, Flex, Text, Spacer } from '@chakra-ui/react'
 
 const ResultComponent = ({ snippet }: { snippet: Snippet }) => {
     return (
@@ -16,10 +15,10 @@ const ResultComponent = ({ snippet }: { snippet: Snippet }) => {
                 </Box>
                 <Spacer />
                 <Box>
-                    <Tag variant="subtle" colorScheme="cyan">
-                        <TagLeftIcon boxSize="12px" as={FaJsSquare} />
+                    <Tag.Root variant="subtle" colorScheme="cyan">
+                        <Tag.StartElement boxSize="12px" as={FaJsSquare} />
                         <TagLabel>{snippet.language}</TagLabel>
-                    </Tag>
+                    </Tag.Root>
                 </Box>
             </Flex>
             <Box h="100%" fontSize="12">

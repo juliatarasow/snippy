@@ -1,14 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import {
-    Box,
-    Flex,
-    Text,
-    Button,
-    As,
-    FlexProps,
-    OmitCommonProps,
-} from '@chakra-ui/react'
+
+import { Box, Button, Flex, FlexProps, Text } from '@chakra-ui/react'
+
 import Logo from './Logo'
 
 const MenuItem = ({
@@ -17,9 +11,9 @@ const MenuItem = ({
     to = '/',
     ...rest
 }: {
-    children?: any
+    children?: React.ReactNode
     isLast?: boolean
-    to: any
+    to?: string
 }) => {
     return (
         <Text
@@ -55,18 +49,7 @@ const MenuIcon = () => (
     </svg>
 )
 
-const Header = (
-    props: JSX.IntrinsicAttributes &
-        OmitCommonProps<
-            React.DetailedHTMLProps<
-                React.HTMLAttributes<HTMLDivElement>,
-                HTMLDivElement
-            >,
-            keyof FlexProps
-        > &
-        FlexProps &
-        OmitCommonProps<any, keyof FlexProps> & { as?: As<any> | undefined }
-) => {
+const Header = (props: FlexProps) => {
     const [show, setShow] = React.useState(false)
     const toggleMenu = () => setShow(!show)
 
@@ -100,41 +83,21 @@ const Header = (
             >
                 <Flex
                     align="center"
-                    justify={[
-                        'center',
-                        'space-between',
-                        'flex-end',
-                        'flex-end',
-                    ]}
+                    justify={['center', 'space-between', 'flex-end', 'flex-end']}
                     direction={['column', 'row', 'row', 'row']}
                     pt={[4, 4, 0, 0]}
                 >
                     <MenuItem to="/">Home</MenuItem>
-                    <MenuItem to="/feed">Snips </MenuItem>
-                    <MenuItem to="/features">Features </MenuItem>
+                    <MenuItem to="/feed">Snips</MenuItem>
+                    <MenuItem to="/features">Features</MenuItem>
                     <MenuItem to="/signup" isLast>
                         <Button
                             size="sm"
                             rounded="md"
-                            color={[
-                                'primary.500',
-                                'primary.500',
-                                'white',
-                                'white',
-                            ]}
-                            bg={[
-                                'white',
-                                'white',
-                                'primary.500',
-                                'primary.500',
-                            ]}
+                            color={['primary.500', 'primary.500', 'white', 'white']}
+                            bg={['white', 'white', 'primary.500', 'primary.500']}
                             _hover={{
-                                bg: [
-                                    'primary.100',
-                                    'primary.100',
-                                    'primary.600',
-                                    'primary.600',
-                                ],
+                                bg: ['primary.100', 'primary.100', 'primary.600', 'primary.600'],
                             }}
                         >
                             Create Account

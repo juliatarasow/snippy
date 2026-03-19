@@ -1,23 +1,12 @@
-import React from "react";
-import { As, Box, ChakraProps, OmitCommonProps, Text } from "@chakra-ui/react";
+import React from 'react'
+import { Box, BoxProps, Text } from '@chakra-ui/react'
 
-export default function Logo(
-  props: JSX.IntrinsicAttributes &
-    OmitCommonProps<
-      React.DetailedHTMLProps<
-        React.HTMLAttributes<HTMLDivElement>,
-        HTMLDivElement
-      >,
-      keyof ChakraProps
-    > &
-    ChakraProps &
-    OmitCommonProps<any, keyof ChakraProps> & { as?: As<any> | undefined }
-) {
-  return (
-    <Box {...props}>
-      <Text fontSize="lg" fontWeight="bold">
-        Logo
-      </Text>
-    </Box>
-  );
+export default function Logo(props: BoxProps) {
+    return (
+        <Box {...props}>
+            <Text fontSize="lg" fontWeight="bold">
+                Logo
+            </Text>
+        </Box>
+    )
 }

@@ -2,10 +2,11 @@ import React from 'react'
 
 import { Heading, VStack, Box, HStack, Separator, Text, Flex } from '@chakra-ui/react'
 
-import { useAuthState } from 'auth'
-import { User } from 'snippy'
 import TimelineComponent from './Timeline'
 import AvatarComponent from 'components/Avatar'
+
+import { useAuthState } from 'auth'
+import { User } from 'snippy'
 
 function ProfileCard({ user }: { user: User }) {
     const { profile } = useAuthState()

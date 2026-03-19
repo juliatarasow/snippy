@@ -1,5 +1,4 @@
-import { darken, mode, whiten } from '@chakra-ui/theme-tools'
-import { Dict } from '@chakra-ui/utils'
+
 export const BoxCustom = {
     // Styles for the base style
     baseStyle: {},

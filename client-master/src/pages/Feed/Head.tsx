@@ -1,5 +1,6 @@
-import { VStack, Text, Heading } from '@chakra-ui/layout'
 import React from 'react'
+
+import { VStack, Text, Heading } from '@chakra-ui/react'
 
 interface IHead {
     title: string

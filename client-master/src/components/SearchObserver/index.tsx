@@ -1,16 +1,7 @@
-import {
-    useDisclosure,
-    Modal,
-    ModalOverlay,
-    ModalContent,
-    ModalHeader,
-    ModalCloseButton,
-    Input,
-    InputGroup,
-    InputRightElement,
-} from '@chakra-ui/react'
 import React from 'react'
 import { FaSearch } from 'react-icons/fa'
+
+import { Dialog, DialogBackdrop, Field, Input, InputElement, useDisclosure } from '@chakra-ui/react'
 
 import ObserverComponent from './ObserverComponent'
 
@@ -22,31 +13,31 @@ export default function SearchObserverComponent() {
 
     return (
         <>
-            <InputGroup maxW="25vw">
+            <Field.Root maxW="25vw">
                 <Input
                     onClick={onOpen}
                     ref={finalRef}
                     placeholder="What are you looking for?"
                 />
-                <InputRightElement children={<FaSearch color="black" />} />
-            </InputGroup>
-            <Modal
+                <InputElement children={<FaSearch color="black" />} />
+            </Field.Root>
+            <Dialog.Root
                 initialFocusRef={initialRef}
                 finalFocusRef={finalRef}
                 isOpen={isOpen}
                 onClose={onClose}
             >
-                <ModalOverlay />
-                <ModalContent fontFamily="Roboto">
-                    <ModalHeader fontFamily="Roboto Mono">
+                <DialogBackdrop />
+                <Dialog.Content fontFamily="Roboto">
+                    <Dialog.Header fontFamily="Roboto Mono">
                         Search for snips
-                    </ModalHeader>
-                    <ModalCloseButton />
+                    </Dialog.Header>
+                    <Dialog.CloseTrigger />
                     <ObserverComponent
                         reference={initialRef}
                     ></ObserverComponent>
-                </ModalContent>
-            </Modal>
+                </Dialog.Content>
+            </Dialog.Root>
         </>
     )
 }

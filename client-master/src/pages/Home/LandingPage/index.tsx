@@ -1,19 +1,10 @@
 import React from 'react'
-import { As, Flex, FlexProps, OmitCommonProps } from '@chakra-ui/react'
+
+import { Flex, FlexProps } from '@chakra-ui/react'
+
 import Header from './Header'
 
-export default function LandingLayout(
-    props: JSX.IntrinsicAttributes &
-        OmitCommonProps<
-            React.DetailedHTMLProps<
-                React.HTMLAttributes<HTMLDivElement>,
-                HTMLDivElement
-            >,
-            keyof FlexProps
-        > &
-        FlexProps &
-        OmitCommonProps<any, keyof FlexProps> & { as?: As<any> | undefined }
-) {
+export default function LandingLayout(props: FlexProps) {
     return (
         <Flex
             as="nav"

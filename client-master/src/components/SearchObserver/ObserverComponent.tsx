@@ -1,23 +1,11 @@
-import {
-    Center,
-    Input,
-    ModalBody,
-    ModalFooter,
-    StackDivider,
-    VStack,
-} from '@chakra-ui/react'
 import React, { useState, useEffect, MutableRefObject } from 'react'
-import {
-    Subject,
-    debounceTime,
-    switchMap,
-    map,
-    filter,
-    distinctUntilChanged,
-    take,
-} from 'rxjs'
+import { debounceTime, distinctUntilChanged, filter, map, Subject, switchMap, take } from 'rxjs'
 import { ajax } from 'rxjs/ajax'
+
+import { Center, Dialog, Input, Stack, VStack } from '@chakra-ui/react'
+
 import ResultComponent from './Results'
+
 import { Post } from 'snippy'
 
 const ObserverComponent = ({
@@ -60,7 +48,7 @@ const ObserverComponent = ({
 
     return (
         <>
-            <ModalBody pb={6}>
+            <Dialog.Body pb={6}>
                 <Center>
                     <Input
                         ref={reference}
@@ -69,28 +57,17 @@ const ObserverComponent = ({
                         placeholder="Type..."
                     />
                 </Center>
-            </ModalBody>
-            <ModalFooter>
-                <VStack
-                    divider={<StackDivider borderColor="gray.200" />}
-                    spacing={4}
-                    align="stretch"
-                >
-                    {result
-                        ? result.map(
-                              (
-                                  value: Post,
-                                  i: React.Key | null | undefined
-                              ) => (
-                                  <ResultComponent
-                                      key={i}
-                                      snippet={value.snippet}
-                                  />
-                              )
-                          )
-                        : null}
+            </Dialog.Body>
+            <Dialog.Footer>
+                <VStack gap={4} align="stretch">
+                    {result?.map((value: Post, i: number) => (
+                        <React.Fragment key={i}>
+                            {i > 0 && <Stack.Separator borderColor="gray.200" />}
+                            <ResultComponent snippet={value.snippet} />
+                        </React.Fragment>
+                    ))}
                 </VStack>
-            </ModalFooter>
+            </Dialog.Footer>
         </>
     )
 }
