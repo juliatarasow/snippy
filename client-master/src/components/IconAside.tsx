@@ -1,5 +1,4 @@
 import { Tooltip, Box, Icon, Link } from '@chakra-ui/react'
-
 import React from 'react'
 
 interface AIcon {
@@ -12,7 +11,7 @@ function IconAside({ label, icon, size }: AIcon) {
     return (
         <div>
             <Link variant="aside" p="0">
-                <Tooltip label={label}>
+                <Tooltip content={label}>
                     <Box
                         borderRadius="full"
                         p="16px"

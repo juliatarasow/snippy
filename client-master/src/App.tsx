@@ -1,13 +1,16 @@
 import * as React from 'react'
+
 import { ChakraProvider } from '@chakra-ui/react'
 
-import { customTheme } from './Styles/theme'
+import { customSystem } from 'Styles/theme .js'
 import './Styles/Fonts.tsx'
 
 import { AuthProvider, useAuthState } from './auth'
+
 import { AppRouter } from './AppRouter'
 import { SnipProvider } from 'useReactive'
 import useReadLocalStorage from './Hooks/useReadlocalStorage'
+
 import { User } from 'snippy'
 
 
@@ -17,7 +20,7 @@ export const App = () => {
     return (
         <AuthProvider initialState={(user as User) || state}>
             <SnipProvider>
-                <ChakraProvider theme={customTheme}>
+                <ChakraProvider value={customSystem}>
                     <AppRouter />
                 </ChakraProvider>
             </SnipProvider>

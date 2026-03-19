@@ -11,9 +11,11 @@ export default defineConfig({
       auth: path.resolve(__dirname, "src/auth"),
       components: path.resolve(__dirname, "src/components"),
       LandingPage: path.resolve(__dirname, "src/LandingPage"),
+      pages: path.resolve(__dirname, "src/pages"),
       view: path.resolve(__dirname, "src/view"),
       service: path.resolve(__dirname, "src/service"),
       sessions: path.resolve(__dirname, "src/sessions"),
+      Styles: path.resolve(__dirname, "src/Styles"),
       store: path.resolve(__dirname, "src/store"),
       useAxios: path.resolve(__dirname, "src/useAxios"),
       useReactive: path.resolve(__dirname, "src/useReactive")

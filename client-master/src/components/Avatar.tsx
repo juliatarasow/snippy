@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react'
 
-import { Box } from '@chakra-ui/layout'
+import { Box, Image } from '@chakra-ui/react'
 import { User, Snippet } from 'snippy'
 
-import { Image } from '@chakra-ui/image'
 function AvatarComponent({
     profile,
 }: {

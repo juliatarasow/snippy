@@ -1,4 +1,4 @@
-import { Input, InputGroup, InputRightElement } from '@chakra-ui/react'
+import { Input, InputGroup } from '@chakra-ui/react'
 import { FaSearch } from 'react-icons/fa'
 import React, { useEffect, useState } from 'react'
 import { Post } from 'snippy'
@@ -25,22 +25,23 @@ function SearchComponent() {
         setInput(input)
         setPostsList(filtered)
     }
+
     useEffect(() => {
         fetchData()
     }, [])
+
     return (
         <div>
-            <InputGroup>
+            <InputGroup endElement={<FaSearch color="black" />}>
                 <Input
                     value={input}
                     onChange={(e) => updateInput(e.target.value)}
                     placeholder="What are you looking for?"
                 />
-                <InputRightElement children={<FaSearch color="black" />} />
             </InputGroup>
             {postsList
                 ? postsList.map((post) => (
-                      <p>{JSON.stringify(post.snippet.title)}</p>
+                      <p key={post._id}>{JSON.stringify(post.snippet.title)}</p>
                   ))
                 : null}
         </div>

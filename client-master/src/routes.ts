@@ -1,12 +1,12 @@
-import HomeComponent from 'view/Home/Home'
-import LoginPage from 'view/Login'
+import HomeComponent from './pages/Home/Home'
+import LoginPage from './pages/Login'
 import SinglePostComponent from 'components/SinglePost'
-import SignUpPage from 'view/SignUp'
-import CreateMainComponent from 'view/Create'
-import Feed from 'view/Feed'
-import DashboardMainComponent from 'view/Dashboard'
-import Profile from './view/Profile'
-import SettingsComponent from 'view/Settings'
+import SignUpPage from './pages/SignUp'
+import CreateMainComponent from './pages/Create'
+import Feed from './pages/Feed'
+import DashboardMainComponent from './pages/Dashboard'
+import Profile from './pages/Profile'
+import SettingsComponent from './pages/Settings'
 
 const Routes = [
     {

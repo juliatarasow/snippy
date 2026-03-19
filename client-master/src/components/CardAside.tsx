@@ -1,4 +1,4 @@
-import { Divider, Heading, Link, VStack, Text, Flex } from '@chakra-ui/react'
+import { Flex, Heading, Link, Separator, Text, VStack } from '@chakra-ui/react'
 import React, { useEffect, useState } from 'react'
 
 import { Post } from 'snippy'
@@ -33,7 +33,7 @@ function CardAside({ heading, observable }: ACardAside) {
                         {heading}
                     </Heading>
                 </Link>
-                <Divider borderColor="lightgray" />
+                <Separator borderColor="lightgray" />
                 <Flex flexDir="column" px="16px">
                     {snips?.map((post, key) => (
                         <div key={key} style={{ padding: '8px' }}>
